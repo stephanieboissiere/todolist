@@ -1,0 +1,11 @@
+<h1>my to do list</h1>
+<div class="ajouter-container">
+    <input type="text" placeholder="Ajouter une liste" #newList (keyup.enter)="addList(newList.value)">
+    <button (click)="addList(newList.value)">créer</button>
+
+</div>
+<div class="new-container">
+    <div *ngFor="let list of lists">
+        <app-liste [list]="list"></app-liste>
+    </div>
+</div>
